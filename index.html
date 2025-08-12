@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="hero" class="hero">
+  <h2>Hi, I'm Gorthy Charan sai</h2>
+  <p class="lead">"Student, Developer, Problem-solver"</p>
+</section>
+
+<section id="about" class="section">
+  <h3>About</h3>
+  <p>I’m a passionate Python developer and aspiring data scientist, currently learning advanced data analysis, machine learning, and visualization techniques. I enjoy building data-driven applications, exploring real-world datasets, and creating tools that turn raw information into actionable insights. I’m looking for opportunities to apply my skills in solving complex problems, contribute to impactful projects, and collaborate with others who share a love for innovation and data.</p>
+</section>
+
+<section id="projects" class="section">
+  <h3>Projects</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Project One</h4>
+      <p>Smart Maintenance System for Household Electrical Faults Using ElectroFix
+Developed an intelligent system that detects, diagnoses, and reports household electrical faults in real-time. Utilized sensors and automation to ensure faster maintenance, improved safety, and efficient fault management through the ElectroFix platform..</p>
+    </article>
+    <article class="card">
+      <h4>Project Two</h4>
+      <p>.</p>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h3>Skills</h3>
+  <ul class="skills">
+    <li>Python</li>
+    <li>Flask</li>
+    <li>HTML & CSS</li>
+    <li>SQL / Data Structures</li>
+  </ul>
+</section>
+
+<section id="contact" class="section contact">
+  <h3>Contact</h3>
+  <form action="{{ url_for('contact') }}" method="post" id="contact-form">
+    <label for="name">Name</label>
+    <input id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="subject">Subject</label>
+    <input id="subject" name="subject">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+{% endblock %}
